@@ -1,0 +1,200 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html
+{
+    font-size: 22px;
+}
+
+
+body
+{
+    background-color: #353b48;
+    padding: 1rem;
+}
+
+.title h1
+{
+    color: #04f7c2;
+    text-align: center;
+    margin: 2rem 0px;
+    font-size: 2.5rem;
+    text-shadow: 5px 5px 10px rgb(141, 40, 234);
+}
+
+.box
+{
+    height: 13.5rem;
+    border: 5px solid white;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.box img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    transform-origin: top;
+}
+
+.box img:hover
+{
+    transform: scale(1.5);
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+:root
+{
+    --bgcolor: #00b890;
+}
+
+.control
+{
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-group button
+{
+    width: 95px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    background-color: var(--bgcolor);
+    color: whitesmoke ;
+    font-size: 0.8rem;
+    border: 2px solid var(--bgcolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 8px;
+}
+
+.btn-group button:hover,
+.btn-group .btn-clicked
+{
+    background-color: #353b48;
+}
+
+#search
+{
+    width: 425px;
+    height: 50px;
+    outline: none;
+    border: 5px solid var(--bgcolor);
+    border-radius: 3px;
+    padding: 15px 10px;
+    font-size: 0.7rem;
+}
+
+@media screen and (max-width:756px)
+{
+    .container
+    {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .box
+    {
+        height: 8rem;
+    }
+
+    .container
+    {
+        padding-top: 40px;
+    }
+}
+
+
+@media screen and (max-width:480px)
+{
+    .container
+    {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .box
+    {
+        height: 6rem;
+    }
+
+    .container
+    {
+        padding-top: 50px;
+    }
+
+    .title h1
+    {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    #search
+    {
+        width: 165px;
+    }
+}
+
+@media screen and (max-width:388px)
+{
+    .container
+    {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .box
+    {
+        height: 6rem;
+    }
+
+    .container
+    {
+        padding-top: 40px;
+    }
+
+    .title h1
+    {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    #search
+    {
+        width: 165px;
+    }
+
+    .btn-group button 
+    {
+        font-size: 0.7rem;
+        width: 55px;
+    }
+
+    .btn-group .btn-ice-cream
+    {
+        padding: 1.5px;
+        font-size: 13px;
+        width: 70px;
+    }
+
+}
